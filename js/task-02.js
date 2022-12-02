@@ -7,14 +7,17 @@ const ingredients = [
   'Condiments',
 ];
 
+const ul = document.querySelector('#ingredients');
 
-const addElement = document.createElement('h1');
 
-addElement.textContent = "Hello";
+for (const el of ingredients) {
+  let addElement = document.createElement('li');
+  addElement.classList.add('item');
+  addElement.textContent = el;
+  ul.append(addElement);
+}
 
-addElement.classList = "trecl"
-console.log(addElement);
-
+console.dir(ul);
 
 
 
