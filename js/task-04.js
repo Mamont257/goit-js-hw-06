@@ -3,26 +3,21 @@ const decrement = document.querySelector('button[data-action="decrement"]')
 const increment = document.querySelector('button[data-action="increment"]')
 
 const value = document.querySelector('#value');
-
-// Number(value.childElementCount);
-// console.dir(value);
-// Number(value.textContent)+1;
-// console.log(increment);
+let counterValue = 0;
 
 
 decrement.addEventListener('click', dec);
 
 function dec(evt){
-    // evt.value
-    // console.dir(evt.currentTarget.nextSibling)
-    Number(value.textContent -= 1);
+    counterValue -= 1;
+    value.textContent = counterValue;
 }
 
 increment.addEventListener('click', inc);
 
 function inc(){
-    // console.log('ty')
-    Number(value.textContent += 1);
+    counterValue += 1;
+    value.textContent = counterValue;
 }
 
 
