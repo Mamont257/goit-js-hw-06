@@ -5,15 +5,7 @@ const user ={};
 
 function onSubmit(event){
     event.preventDefault();
-    // console.dir(event.currentTarget.elements.email.value);
     const {email, password} = event.currentTarget.elements;
-    // console.dir(password.value);
-    // console.dir(event.currentTarget[1].value);
-    // console.log(event)
-    // const {value} = event.currentTarget[0];
-    // const {password} = event.currentTarget[1].value;
-
-
 
     if(!email.value || !password.value){
         console.log(alert('Всі поля повинні бути заповненні!!!'));
@@ -21,13 +13,9 @@ function onSubmit(event){
         user.email = email.value;
         user.password = password.value;
         console.log(user);
+        form.reset();
     }
-
-
-
-
-
-
+    
 
     // if(!event.currentTarget[0].value || !event.currentTarget[1].value){
     //     console.log(alert('Всі поля повинні бути заповненні!!!'));
@@ -37,10 +25,6 @@ function onSubmit(event){
     //     console.log(user);
     // }
 }
-
-
-
-
 
 
 
