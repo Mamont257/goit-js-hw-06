@@ -20,11 +20,11 @@ ul.style.display = "flex";
 ul.style.gap = "20px";
 ul.style.listStyle = "none";
 
-for (const {url, alt} of images) {
-  const li = `<li><img src="${url}" alt="${alt}" width="350">`;
-  ul.insertAdjacentHTML('beforeend', li);
-}
-console.log(ul);
+const li = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="350">`);
+
+ul.insertAdjacentHTML('beforeend', String(li))
+
+
 
 
 
