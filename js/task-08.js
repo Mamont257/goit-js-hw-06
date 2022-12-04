@@ -7,15 +7,14 @@ function onSubmit(event){
     event.preventDefault();
     const {email, password} = event.currentTarget.elements;
 
-    if(!email.value || !password.value){
-        console.log(alert('Всі поля повинні бути заповненні!!!'));
+    if(!email.value.trim() || !password.value.trim()){
+        return alert('Всі поля повинні бути заповненні!!!');
     } else {
         user.email = email.value;
         user.password = password.value;
         console.log(user);
         form.reset();
     }
-    
 
     // if(!event.currentTarget[0].value || !event.currentTarget[1].value){
     //     console.log(alert('Всі поля повинні бути заповненні!!!'));

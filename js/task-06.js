@@ -3,16 +3,15 @@ const input = document.querySelector('#validation-input');
 input.addEventListener('blur', onInput);
 
 function onInput(evt) {
+    
+    input.classList.remove('invalid', 'valid');
 
     if (evt.currentTarget.value.length === Number(input.getAttribute('data-length'))) {
-        if (input.classList.contains('invalid')) {
-            input.classList.remove('invalid');
-            input.classList.add('valid');
-        };
         input.classList.add('valid');
     } else {
         input.classList.add('invalid');
     };
+
 }
 
 
