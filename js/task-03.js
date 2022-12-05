@@ -22,6 +22,8 @@ ul.style.listStyle = "none";
 
 const li = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="350">`).join('');
 
+console.log(typeof li);
+
 ul.insertAdjacentHTML('beforeend', li)
 
 
