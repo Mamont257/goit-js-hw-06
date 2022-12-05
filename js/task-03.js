@@ -20,9 +20,9 @@ ul.style.display = "flex";
 ul.style.gap = "20px";
 ul.style.listStyle = "none";
 
-const li = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="350">`);
+const li = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="350">`).join('');
 
-ul.insertAdjacentHTML('beforeend', String(li))
+ul.insertAdjacentHTML('beforeend', li)
 
 
 
